@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #e2e8f0;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Header & Navigation */
+header {
+    position: sticky;
+    top: 0;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(71, 85, 105, 0.3);
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active-link {
+    color: #06b6d4;
+}
+
+.status {
+    font-size: 0.8rem;
+    color: #34d399;
+    background: rgba(16, 185, 129, 0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+.time {
+    font-family: 'Monaco', monospace;
+    font-size: 0.85rem;
+    color: #06b6d4;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-bottom: 4rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: #3b82f6;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: 2px solid #3b82f6;
+}
+
+.cta-btn:hover {
+    background: transparent;
+    color: #3b82f6;
+}
+
+/* Development Section */
+.dev-section {
+    margin-bottom: 4rem;
+}
+
+.dev-section h2,
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(71, 85, 105, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    border-color: rgba(6, 182, 212, 0.5);
+    background: rgba(30, 41, 59, 0.8);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(6, 182, 212, 0.1);
+}
+
+.project-card h3 {
+    color: #06b6d4;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.project-card p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    display: inline-block;
+    background: rgba(6, 182, 212, 0.1);
+    color: #06b6d4;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(6, 182, 212, 0.3);
+}
+
+.loading {
+    text-align: center;
+    color: #64748b;
+    padding: 2rem;
+    font-style: italic;
+}
+
+/* Contact Section */
+.contact-section {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(71, 85, 105, 0.3);
+    border-radius: 12px;
+    padding: 3rem;
+    margin-bottom: 4rem;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.contact-info h3 {
+    color: #06b6d4;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.contact-item {
+    margin-bottom: 1.5rem;
+}
+
+.contact-item .label {
+    display: block;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.contact-item a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: #06b6d4;
+}
+
+.quick-message {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.quick-message input,
+.quick-message textarea {
+    background: rgba(31, 41, 55, 0.8);
+    border: 1px solid rgba(71, 85, 105, 0.3);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    color: #e2e8f0;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: border 0.3s;
+}
+
+.quick-message input:focus,
+.quick-message textarea:focus {
+    outline: none;
+    border-color: #06b6d4;
+}
+
+.quick-message textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.quick-message button {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.quick-message button:hover {
+    background: #06b6d4;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid rgba(71, 85, 105, 0.3);
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-section {
+        padding: 1.5rem;
+    }
+}

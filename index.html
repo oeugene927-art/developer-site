@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eugene - Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Eugene Dev</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active-link">Home</a></li>
+                <li><a href="#development">Development</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><span class="status">🟢 Online</span></li>
+                <li><span id="time" class="time"></span></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Hey, I'm Eugene</h1>
+                <p>Full-stack developer building real solutions</p>
+                <p class="subtitle">Currently working on scalable systems, APIs, and databases</p>
+                <a href="#development" class="cta-btn">See what I'm building →</a>
+            </div>
+        </section>
+
+        <!-- Development Section -->
+        <section id="development" class="dev-section">
+            <h2>What I'm Working On</h2>
+            <div class="projects-container" id="projects">
+                <!-- Projects will load here -->
+                <div class="loading">Loading projects...</div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2>Let's Connect</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Reach me directly</h3>
+                    <div class="contact-item">
+                        <span class="label">📱 Phone:</span>
+                        <a href="tel:+27712904112">+27 712 904 112</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="label">💬 WhatsApp:</span>
+                        <a href="https://wa.me/27712904112" target="_blank">Message on WhatsApp</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="label">🔗 GitHub:</span>
+                        <a href="https://github.com/oeugene927-art" target="_blank">@oeugene927-art</a>
+                    </div>
+                </div>
+                <form class="quick-message" id="contactForm">
+                    <input type="text" placeholder="Your name" required>
+                    <textarea placeholder="Quick message..." required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Eugene © 2026 | Building cool things daily</p>
+        <p id="status-update"></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
